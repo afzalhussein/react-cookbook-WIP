@@ -1,14 +1,14 @@
-import { Outlet, Link } from 'react-router-dom';
-import { Typography, Box } from '@mui/material';
+import { RecipeContainer } from '../../components/recipe-container';
 
 export const ResponsiveRoutes = () => {
+  const dependencies = [{ text: 'react-responsive', link: 'https://github.com/contra/react-responsive' }];
+  const links = [{ text: 'People', link: 'people' }];
   return (
-    <Box>
-      <Typography variant="h2">Ronsponsive routes:</Typography>
-      <Box component="nav" sx={{ display: 'flex' }}>
-        <Link to="people">People</Link>
-      </Box>
-      <Outlet />
-    </Box>
+    <RecipeContainer
+      title="Ronsponsive routes"
+      description="work well across all screen sizes"
+      dependencies={dependencies}
+      links={links}
+    />
   );
 };
