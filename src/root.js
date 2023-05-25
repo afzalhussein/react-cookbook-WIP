@@ -5,6 +5,7 @@ export const Root = () => {
   const links = [
     { text: 'Responsive routes', link: '/responsive-routes' },
     { text: 'Move state in routes', link: '/state-in-routes' },
+    { text: 'Create transitions with react transition group', link: '/transitions-with-react-transition-group' },
     { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' }
   ];
   return (
