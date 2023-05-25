@@ -6,7 +6,8 @@ export const Root = () => {
     { text: 'Responsive routes', link: '/responsive-routes' },
     { text: 'Move state in routes', link: '/state-in-routes' },
     { text: 'Create transitions with react transition group', link: '/transitions-with-react-transition-group' },
-    { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' }
+    { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' },
+    { text: 'Secured routes', link: '/secured-routes' }
   ];
   return (
     <Container>
@@ -15,7 +16,7 @@ export const Root = () => {
       </Typography>
       <Box component="nav" sx={{ display: 'flex', alignItems: 'start' }}>
         {links.map((l) => (
-          <Button component={Link} to={l.link}>
+          <Button component={Link} to={l.link} sx={{ textTransform: 'inherit' }}>
             {l.text}
           </Button>
         ))}

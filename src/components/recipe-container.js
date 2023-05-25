@@ -19,9 +19,9 @@ export const RecipeContainer = ({ title, description, links, dependencies }) => 
       </Box>
       <Box component="nav" sx={{ display: 'flex' }}>
         {links.map((l) => (
-          <Link key={l.link} to={l.link}>
+          <MuiLink key={l.link} to={l.link} sx={{ ml: 1 }} component={Link}>
             {l.text}
-          </Link>
+          </MuiLink>
         ))}
       </Box>
       <Box component="hr" />

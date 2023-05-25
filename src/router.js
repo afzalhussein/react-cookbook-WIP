@@ -20,6 +20,12 @@ import { AboutOffices as TransitionsAboutOffices } from './views/transitions-wit
 import { PromptForPageExitConfirmation } from './views/prompt-for-page-exit-confirmations';
 import { ExitConfirmPage } from './views/prompt-for-page-exit-confirmations/exit-confirm-page';
 
+import { SecuredRoutes } from './views/secured-routes';
+import { SecureGuard } from './views/secured-routes/secure-guard';
+import { SecurityProvider } from './views/secured-routes/security-context';
+import { Public } from './views/secured-routes/public';
+import { Private } from './views/secured-routes/private';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -87,6 +93,26 @@ export const router = createBrowserRouter([
           {
             path: 'exit-confirm-page',
             element: <ExitConfirmPage />
+          }
+        ]
+      },
+      {
+        path: 'secured-routes',
+        element: <SecuredRoutes />,
+        children: [
+          {
+            path: 'public',
+            element: <Public />
+          },
+          {
+            path: 'private',
+            element: (
+              <SecurityProvider>
+                <SecureGuard>
+                  <Private />
+                </SecureGuard>
+              </SecurityProvider>
+            )
           }
         ]
       }
