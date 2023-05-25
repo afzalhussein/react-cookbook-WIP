@@ -1,7 +1,7 @@
 import { RecipeContainer } from '../../components/recipe-container';
 
 export const StateInRoutes = () => {
-  const dependencies = [];
+  const dependencies = [{ text: 'react-router-dom', link: 'https://reactrouter.com/en/main' }];
   const links = [{ text: 'About', link: 'about' }];
   return (
     <RecipeContainer

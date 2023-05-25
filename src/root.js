@@ -4,7 +4,8 @@ import { Container, Typography, Box, Button } from '@mui/material';
 export const Root = () => {
   const links = [
     { text: 'Responsive routes', link: '/responsive-routes' },
-    { text: 'Move state in routes', link: '/state-in-routes' }
+    { text: 'Move state in routes', link: '/state-in-routes' },
+    { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' }
   ];
   return (
     <Container>

@@ -12,6 +12,9 @@ import { About } from './views/state-in-routes/about';
 import { AboutPeople } from './views/state-in-routes/about-people';
 import { AboutOffices } from './views/state-in-routes/about-office';
 
+import { PromptForPageExitConfirmation } from './views/prompt-for-page-exit-confirmations';
+import { ExitConfirmPage } from './views/prompt-for-page-exit-confirmations/exit-confirm-page';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -49,6 +52,16 @@ export const router = createBrowserRouter([
                 element: <AboutOffices />
               }
             ]
+          }
+        ]
+      },
+      {
+        path: 'prompt-for-page-exit-confirms',
+        element: <PromptForPageExitConfirmation />,
+        children: [
+          {
+            path: 'exit-confirm-page',
+            element: <ExitConfirmPage />
           }
         ]
       }

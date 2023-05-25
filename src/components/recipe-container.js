@@ -10,9 +10,9 @@ export const RecipeContainer = ({ title, description, links, dependencies }) => 
       <Typography variant="body2">{description}</Typography>
 
       <Box sx={{ display: 'flex', alignItems: 'center', my: 1 }}>
-        <Typography>Dependencies:</Typography>
+        <Typography>Ingredents:</Typography>
         {dependencies?.map((d) => (
-          <MuiLink key={d.link} to={d.link}>
+          <MuiLink key={d.link} to={d.link} sx={{ ml: 1 }}>
             {d.text}
           </MuiLink>
         ))}
