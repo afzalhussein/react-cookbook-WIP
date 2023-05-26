@@ -1,17 +1,29 @@
 import { Outlet, Link } from 'react-router-dom';
 import { Container, Typography, Box, Button } from '@mui/material';
 
+import { link as addKeyboardInteractionLink } from './views/add-keyboard-interaction/route';
+import { link as measureTimeWithUseClockLink } from './views/measure-time-with-use-clock/route';
+import { link as transitionsWithReactTransitionGroupLink } from './views/transitions-with-react-transition-group/route';
+import { link as monitorOnlineStatusLink } from './views/monitor-online-status/route';
+import { link as reducerForComplexStateLink } from './views/reducer-for-complex-state/route';
+import { link as responsiveRoutesLink } from './views/responsive-routes/route';
+import { link as promptForPageExitConfirmationRouteLink } from './views/prompt-for-page-exit-confirmations/route';
+import { link as securedRoutesLink } from './views/secured-routes/route';
+import { link as stateInRoutesLink } from './views/state-in-routes/route';
+import { link as useMarkdownForRichContentLink } from './views/use-markdown-for-rich-content/route';
+
 export const Root = () => {
   const links = [
-    { text: 'Responsive routes', link: '/responsive-routes' },
-    { text: 'Move state in routes', link: '/state-in-routes' },
-    { text: 'Create transitions with react transition group', link: '/transitions-with-react-transition-group' },
-    { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' },
-    { text: 'Secured routes', link: '/secured-routes' },
-    { text: 'Reducer for complex state', link: '/reducer-for-complex-state' },
-    { text: 'Measure time with useClock', link: '/measure-time-with-use-clock' },
-    { text: 'Monitor online status', link: '/monitor-online-status' },
-    { text: 'Use markdown for rich content', link: '/use-markdown-for-rich-content' }
+    responsiveRoutesLink,
+    stateInRoutesLink,
+    transitionsWithReactTransitionGroupLink,
+    promptForPageExitConfirmationRouteLink,
+    securedRoutesLink,
+    reducerForComplexStateLink,
+    measureTimeWithUseClockLink,
+    monitorOnlineStatusLink,
+    useMarkdownForRichContentLink,
+    addKeyboardInteractionLink
   ];
 
   return (
