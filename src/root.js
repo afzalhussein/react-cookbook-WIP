@@ -12,6 +12,7 @@ import { link as securedRoutesLink } from './views/secured-routes/route';
 import { link as stateInRoutesLink } from './views/state-in-routes/route';
 import { link as useMarkdownForRichContentLink } from './views/use-markdown-for-rich-content/route';
 import { link as animateWithCssClassesLink } from './views/animate-with-css-classes/route';
+import { link as convertNetworkCallsToHooksLink } from './views/convert-network-calls-to-hooks/route';
 
 export const Root = () => {
   const links = [
@@ -25,7 +26,8 @@ export const Root = () => {
     monitorOnlineStatusLink,
     useMarkdownForRichContentLink,
     addKeyboardInteractionLink,
-    animateWithCssClassesLink
+    animateWithCssClassesLink,
+    convertNetworkCallsToHooksLink
   ];
 
   return (

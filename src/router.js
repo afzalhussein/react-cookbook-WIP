@@ -14,6 +14,7 @@ import { route as monitorOnlineStatusRoute } from './views/monitor-online-status
 import { route as useMarkdownForRichContentRoute } from './views/use-markdown-for-rich-content/route';
 import { route as addKeyboardInteractionRoute } from './views/add-keyboard-interaction/route';
 import { route as animateWithCssClassesRoute } from './views/animate-with-css-classes/route';
+import { route as convertNetworkCallsToHooksRoute } from './views/convert-network-calls-to-hooks/route';
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,8 @@ export const router = createBrowserRouter([
       monitorOnlineStatusRoute,
       useMarkdownForRichContentRoute,
       addKeyboardInteractionRoute,
-      animateWithCssClassesRoute
+      animateWithCssClassesRoute,
+      convertNetworkCallsToHooksRoute
     ]
   }
 ]);
