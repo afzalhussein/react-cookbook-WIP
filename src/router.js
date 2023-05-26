@@ -12,7 +12,8 @@ import { route as reducerForComplexStateRoute } from './views/reducer-for-comple
 import { route as measureTimeWithUseClockRoute } from './views/measure-time-with-use-clock/route';
 import { route as monitorOnlineStatusRoute } from './views/monitor-online-status/route';
 import { route as useMarkdownForRichContentRoute } from './views/use-markdown-for-rich-content/route';
-import { route as AddKeyboardInteractionRoute } from './views/add-keyboard-interaction/route';
+import { route as addKeyboardInteractionRoute } from './views/add-keyboard-interaction/route';
+import { route as animateWithCssClassesRoute } from './views/animate-with-css-classes/route';
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ export const router = createBrowserRouter([
       measureTimeWithUseClockRoute,
       monitorOnlineStatusRoute,
       useMarkdownForRichContentRoute,
-      AddKeyboardInteractionRoute
+      addKeyboardInteractionRoute,
+      animateWithCssClassesRoute
     ]
   }
 ]);

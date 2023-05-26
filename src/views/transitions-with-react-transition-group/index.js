@@ -8,7 +8,7 @@ export const TransitionsWithReactTransitionGroup = () => {
   const links = [{ text: 'About', link: 'about' }];
   return (
     <RecipeContainer
-      title="Create Transitions with React Transition Group"
+      title="Create transitions with react-transition-group"
       description="use animation to connect different elements visually"
       dependencies={dependencies}
       links={links}
