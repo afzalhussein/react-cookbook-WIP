@@ -34,6 +34,9 @@ import { SimpleTicker } from './views/measure-time-with-use-clock/simple-ticker'
 import { MultiTickers } from './views/measure-time-with-use-clock/multi-tickers';
 import { IntervalTicker } from './views/measure-time-with-use-clock/interval-ticker';
 
+import { MonitorOnlineStatus } from './views/monitor-online-status';
+import { NetworkChecker } from './views/monitor-online-status/network-checker';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -149,6 +152,16 @@ export const router = createBrowserRouter([
           {
             path: 'interval-ticker',
             element: <IntervalTicker />
+          }
+        ]
+      },
+      {
+        path: 'monitor-online-status',
+        element: <MonitorOnlineStatus />,
+        children: [
+          {
+            path: 'network-checker',
+            element: <NetworkChecker />
           }
         ]
       }

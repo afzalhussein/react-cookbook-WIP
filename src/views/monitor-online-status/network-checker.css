@@ -1,0 +1,16 @@
+.NetworkChecker {
+  margin: 32px;
+}
+
+.NetworkChecker-indicator-online,
+.NetworkChecker-indicator-offline {
+  display: inline-block;
+}
+
+.NetworkChecker-indicator-online {
+  color: green;
+}
+
+.NetworkChecker-indicator-offline {
+  color: red;
+}

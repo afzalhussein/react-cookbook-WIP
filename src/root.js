@@ -9,7 +9,8 @@ export const Root = () => {
     { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' },
     { text: 'Secured routes', link: '/secured-routes' },
     { text: 'Reducer for complex state', link: '/reducer-for-complex-state' },
-    { text: 'Measure time with useClock', link: '/measure-time-with-use-clock' }
+    { text: 'Measure time with useClock', link: '/measure-time-with-use-clock' },
+    { text: 'Monitor online status', link: '/monitor-online-status' }
   ];
 
   return (
