@@ -8,7 +8,8 @@ export const Root = () => {
     { text: 'Create transitions with react transition group', link: '/transitions-with-react-transition-group' },
     { text: 'Prompt for page exit confirmations', link: '/prompt-for-page-exit-confirms' },
     { text: 'Secured routes', link: '/secured-routes' },
-    { text: 'Reducer for complex state', link: '/reducer-for-complex-state' }
+    { text: 'Reducer for complex state', link: '/reducer-for-complex-state' },
+    { text: 'Measure time with useClock', link: '/measure-time-with-use-clock' }
   ];
 
   return (
@@ -16,7 +17,7 @@ export const Root = () => {
       <Typography component="h1" variant="h3">
         React cookbook
       </Typography>
-      <Box component="nav" sx={{ display: 'flex', alignItems: 'start' }}>
+      <Box component="nav" sx={{ display: 'flex', alignItems: 'start', flexWrap: 'wrap' }}>
         {links.map((l) => (
           <Button key={l.link} component={Link} to={l.link} sx={{ textTransform: 'inherit', whiteSpace: 'nowrap' }}>
             {l.text}

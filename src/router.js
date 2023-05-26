@@ -29,6 +29,11 @@ import { Private } from './views/secured-routes/private';
 import { ReducerForComplexState } from './views/reducer-for-complex-state';
 import { Puzzle } from './views/reducer-for-complex-state/puzzle';
 
+import { MeasureTimeWithUseClock } from './views/measure-time-with-use-clock';
+import { SimpleTicker } from './views/measure-time-with-use-clock/simple-ticker';
+import { MultiTickers } from './views/measure-time-with-use-clock/multi-tickers';
+import { IntervalTicker } from './views/measure-time-with-use-clock/interval-ticker';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -126,6 +131,24 @@ export const router = createBrowserRouter([
           {
             path: 'puzzle',
             element: <Puzzle />
+          }
+        ]
+      },
+      {
+        path: 'measure-time-with-use-clock',
+        element: <MeasureTimeWithUseClock />,
+        children: [
+          {
+            path: 'simple-ticker',
+            element: <SimpleTicker />
+          },
+          {
+            path: 'multi-tickers',
+            element: <MultiTickers />
+          },
+          {
+            path: 'interval-ticker',
+            element: <IntervalTicker />
           }
         ]
       }
