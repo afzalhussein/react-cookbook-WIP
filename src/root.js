@@ -10,7 +10,8 @@ export const Root = () => {
     { text: 'Secured routes', link: '/secured-routes' },
     { text: 'Reducer for complex state', link: '/reducer-for-complex-state' },
     { text: 'Measure time with useClock', link: '/measure-time-with-use-clock' },
-    { text: 'Monitor online status', link: '/monitor-online-status' }
+    { text: 'Monitor online status', link: '/monitor-online-status' },
+    { text: 'Use markdown for rich content', link: '/use-markdown-for-rich-content' }
   ];
 
   return (

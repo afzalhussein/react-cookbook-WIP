@@ -37,6 +37,10 @@ import { IntervalTicker } from './views/measure-time-with-use-clock/interval-tic
 import { MonitorOnlineStatus } from './views/monitor-online-status';
 import { NetworkChecker } from './views/monitor-online-status/network-checker';
 
+import { UseMarkdownForRichContent } from './views/use-markdown-for-rich-content';
+import { SimpleForum } from './views/use-markdown-for-rich-content/forum';
+import { MarkdownForum } from './views/use-markdown-for-rich-content/markdown-forum';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -162,6 +166,20 @@ export const router = createBrowserRouter([
           {
             path: 'network-checker',
             element: <NetworkChecker />
+          }
+        ]
+      },
+      {
+        path: 'use-markdown-for-rich-content',
+        element: <UseMarkdownForRichContent />,
+        children: [
+          {
+            path: 'simple-forum',
+            element: <SimpleForum />
+          },
+          {
+            path: 'markdown-forum',
+            element: <MarkdownForum />
           }
         ]
       }
