@@ -26,6 +26,9 @@ import { SecurityProvider } from './views/secured-routes/security-context';
 import { Public } from './views/secured-routes/public';
 import { Private } from './views/secured-routes/private';
 
+import { ReducerForComplexState } from './views/reducer-for-complex-state';
+import { Puzzle } from './views/reducer-for-complex-state/puzzle';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -113,6 +116,16 @@ export const router = createBrowserRouter([
                 </SecureGuard>
               </SecurityProvider>
             )
+          }
+        ]
+      },
+      {
+        path: 'reducer-for-complex-state',
+        element: <ReducerForComplexState />,
+        children: [
+          {
+            path: 'puzzle',
+            element: <Puzzle />
           }
         ]
       }
