@@ -15,6 +15,7 @@ import { link as animateWithCssClassesLink } from './views/animate-with-css-clas
 import { link as convertNetworkCallsToHooksLink } from './views/convert-network-calls-to-hooks/route';
 import { link as refreshAutomaticallyWithStateCountersLink } from './views/refresh-automatically-with-state-counters/route';
 import { link as cancelNetworkRequestsWithAxiosTokensLink } from './views/cancel-network-requests-with-axios-tokens/route';
+import { link as reduceNetworkLoadWithDebouncedRequestsLink } from './views/reduce-network-load-with-debounced-requests/route';
 
 export const Root = () => {
   const links = [
@@ -31,7 +32,8 @@ export const Root = () => {
     animateWithCssClassesLink,
     convertNetworkCallsToHooksLink,
     refreshAutomaticallyWithStateCountersLink,
-    cancelNetworkRequestsWithAxiosTokensLink
+    cancelNetworkRequestsWithAxiosTokensLink,
+    reduceNetworkLoadWithDebouncedRequestsLink
   ];
 
   return (

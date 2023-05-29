@@ -17,6 +17,7 @@ import { route as animateWithCssClassesRoute } from './views/animate-with-css-cl
 import { route as convertNetworkCallsToHooksRoute } from './views/convert-network-calls-to-hooks/route';
 import { route as refreshAutomaticallyWithStateCountersRoute } from './views/refresh-automatically-with-state-counters/route';
 import { route as cancelNetworkRequestsWithAxiosTokensRoute } from './views/cancel-network-requests-with-axios-tokens/route';
+import { route as reduceNetworkLoadWithDebouncedRequestsRoute } from './views/reduce-network-load-with-debounced-requests/route';
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,8 @@ export const router = createBrowserRouter([
       animateWithCssClassesRoute,
       convertNetworkCallsToHooksRoute,
       refreshAutomaticallyWithStateCountersRoute,
-      cancelNetworkRequestsWithAxiosTokensRoute
+      cancelNetworkRequestsWithAxiosTokensRoute,
+      reduceNetworkLoadWithDebouncedRequestsRoute
     ]
   }
 ]);

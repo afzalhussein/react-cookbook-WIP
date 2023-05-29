@@ -2,7 +2,7 @@ import { Box, LinearProgress, Typography, TextField } from '@mui/material';
 import { JsonViewer } from '@textea/json-viewer';
 
 import { useState } from 'react';
-import { useCancelablePosts } from './use-cancelable-posts';
+import { useDebouncedCancelablePosts } from './use-debounced-cancelable-posts';
 
 export function UserPostsPage() {
   const [userId, setUserId] = useState('');
@@ -11,7 +11,7 @@ export function UserPostsPage() {
     setUserId(event.target.value);
   };
 
-  const { data, loading, error } = useCancelablePosts(userId);
+  const { data, loading, error } = useDebouncedCancelablePosts(userId);
 
   return (
     <Box className="UserPage">
