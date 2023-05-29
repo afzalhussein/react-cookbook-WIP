@@ -14,6 +14,7 @@ import { link as useMarkdownForRichContentLink } from './views/use-markdown-for-
 import { link as animateWithCssClassesLink } from './views/animate-with-css-classes/route';
 import { link as convertNetworkCallsToHooksLink } from './views/convert-network-calls-to-hooks/route';
 import { link as refreshAutomaticallyWithStateCountersLink } from './views/refresh-automatically-with-state-counters/route';
+import { link as cancelNetworkRequestsWithAxiosTokensLink } from './views/cancel-network-requests-with-axios-tokens/route';
 
 export const Root = () => {
   const links = [
@@ -29,7 +30,8 @@ export const Root = () => {
     addKeyboardInteractionLink,
     animateWithCssClassesLink,
     convertNetworkCallsToHooksLink,
-    refreshAutomaticallyWithStateCountersLink
+    refreshAutomaticallyWithStateCountersLink,
+    cancelNetworkRequestsWithAxiosTokensLink
   ];
 
   return (

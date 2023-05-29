@@ -18,7 +18,7 @@ export function UserPage() {
         User 2
       </Button>
       {userDataError ? (
-        <Typography className="error">
+        <Typography className="error" component="div">
           Something went wrong:
           <Typography className="error-contents">{userDataError.message}</Typography>
         </Typography>
