@@ -15,6 +15,7 @@ import { route as useMarkdownForRichContentRoute } from './views/use-markdown-fo
 import { route as addKeyboardInteractionRoute } from './views/add-keyboard-interaction/route';
 import { route as animateWithCssClassesRoute } from './views/animate-with-css-classes/route';
 import { route as convertNetworkCallsToHooksRoute } from './views/convert-network-calls-to-hooks/route';
+import { route as refreshAutomaticallyWithStateCountersRoute } from './views/refresh-automatically-with-state-counters/route';
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +34,8 @@ export const router = createBrowserRouter([
       useMarkdownForRichContentRoute,
       addKeyboardInteractionRoute,
       animateWithCssClassesRoute,
-      convertNetworkCallsToHooksRoute
+      convertNetworkCallsToHooksRoute,
+      refreshAutomaticallyWithStateCountersRoute
     ]
   }
 ]);
