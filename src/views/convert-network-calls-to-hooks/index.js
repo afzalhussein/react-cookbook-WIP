@@ -1,7 +1,15 @@
 import { RecipeContainer } from '../../components/recipe-container';
 
 export const ConvertNetworkCallsToHooks = () => {
-  const dependencies = [];
+  const dependencies = [
+    {
+      text: 'mui',
+      link: 'https://mui.com/material-ui/'
+    },
+    { text: '@textea/json-viewer', link: 'https://viewer.textea.io/' },
+    { text: 'react-json-view', link: 'https://github.com/mac-s-g/react-json-view' },
+    { text: 'JSONPlaceholder', link: 'https://jsonplaceholder.typicode.com/' }
+  ];
   const links = [{ text: 'User page', link: 'user-page' }];
 
   return (

@@ -1,3 +1,6 @@
+import { Button, Box, LinearProgress, Typography } from '@mui/material';
+import { JsonViewer } from '@textea/json-viewer';
+
 import './user-page.css';
 import { useState } from 'react';
 import { useUsers } from './use-users';
@@ -7,19 +10,23 @@ export function UserPage() {
   const { data: userData, loading: userDataLoading, error: userDataError } = useUsers(userId);
 
   return (
-    <div className="UserPage">
-      <button onClick={() => setUserId('1')}>User 1</button>
-      <button onClick={() => setUserId('2')}>User 2</button>
+    <Box className="UserPage">
+      <Button variant={userId === '1' ? 'contained' : 'outlined'} onClick={() => setUserId('1')}>
+        User 1
+      </Button>
+      <Button variant={userId === '2' ? 'contained' : 'outlined'} onClick={() => setUserId('2')}>
+        User 2
+      </Button>
       {userDataError ? (
-        <div className="error">
+        <Typography className="error">
           Something went wrong:
-          <div className="error-contents">{userDataError.message}</div>
-        </div>
+          <Typography className="error-contents">{userDataError.message}</Typography>
+        </Typography>
       ) : userDataLoading ? (
-        <div className="loading">Loading...</div>
+        <LinearProgress />
       ) : (
-        userData && <dl>{JSON.stringify(userData)}</dl>
+        userData && <JsonViewer value={userData} />
       )}
-    </div>
+    </Box>
   );
 }
