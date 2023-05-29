@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import { Container, Typography, Box, Button } from '@mui/material';
+import { Container, Typography, Box, Button, Tabs, Tab } from '@mui/material';
+import { TabPanel } from './components/tab-panel';
 
 import { link as addKeyboardInteractionLink } from './views/add-keyboard-interaction/route';
 import { link as measureTimeWithUseClockLink } from './views/measure-time-with-use-clock/route';
@@ -17,37 +19,70 @@ import { link as refreshAutomaticallyWithStateCountersLink } from './views/refre
 import { link as cancelNetworkRequestsWithAxiosTokensLink } from './views/cancel-network-requests-with-axios-tokens/route';
 import { link as reduceNetworkLoadWithDebouncedRequestsLink } from './views/reduce-network-load-with-debounced-requests/route';
 
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`
+  };
+}
+
 export const Root = () => {
-  const links = [
-    responsiveRoutesLink,
-    stateInRoutesLink,
-    transitionsWithReactTransitionGroupLink,
-    promptForPageExitConfirmationRouteLink,
-    securedRoutesLink,
-    reducerForComplexStateLink,
-    measureTimeWithUseClockLink,
-    monitorOnlineStatusLink,
-    useMarkdownForRichContentLink,
-    addKeyboardInteractionLink,
-    animateWithCssClassesLink,
-    convertNetworkCallsToHooksLink,
-    refreshAutomaticallyWithStateCountersLink,
-    cancelNetworkRequestsWithAxiosTokensLink,
-    reduceNetworkLoadWithDebouncedRequestsLink
+  const recipeGroups = [
+    {
+      name: 'Routing',
+      links: [
+        responsiveRoutesLink,
+        stateInRoutesLink,
+        promptForPageExitConfirmationRouteLink,
+        transitionsWithReactTransitionGroupLink,
+        securedRoutesLink
+      ]
+    },
+    {
+      name: 'Managing State',
+      links: [reducerForComplexStateLink, measureTimeWithUseClockLink, monitorOnlineStatusLink]
+    },
+    {
+      name: 'Interaction Design',
+      links: [addKeyboardInteractionLink, useMarkdownForRichContentLink, animateWithCssClassesLink]
+    },
+    {
+      name: 'Connecting to Services',
+      links: [
+        convertNetworkCallsToHooksLink,
+        refreshAutomaticallyWithStateCountersLink,
+        cancelNetworkRequestsWithAxiosTokensLink,
+        reduceNetworkLoadWithDebouncedRequestsLink
+      ]
+    }
   ];
+
+  const [currentTabValue, setCurrentTabValue] = useState(0);
+
+  const handleTabChange = (event, newValue) => {
+    setCurrentTabValue(newValue);
+  };
 
   return (
     <Container>
       <Typography component="h1" variant="h3">
         React cookbook
       </Typography>
-      <Box component="nav" sx={{ display: 'flex', alignItems: 'start', flexWrap: 'wrap' }}>
-        {links.map((l) => (
-          <Button key={l.link} component={Link} to={l.link} sx={{ textTransform: 'inherit', whiteSpace: 'nowrap' }}>
-            {l.text}
-          </Button>
+      <Tabs value={currentTabValue} onChange={handleTabChange} aria-label="basic tabs example">
+        {recipeGroups.map((group, index) => (
+          <Tab key={group.name} label={group.name} {...a11yProps(index)} sx={{ textTransform: 'inherit' }} />
         ))}
-      </Box>
+      </Tabs>
+
+      <TabPanel value={currentTabValue} index={currentTabValue}>
+        <Box component="nav" sx={{ display: 'flex', alignItems: 'start', flexWrap: 'wrap' }}>
+          {recipeGroups[currentTabValue].links.map((l) => (
+            <Button key={l.link} component={Link} to={l.link} sx={{ textTransform: 'inherit', whiteSpace: 'nowrap' }}>
+              {l.text}
+            </Button>
+          ))}
+        </Box>
+      </TabPanel>
       <Outlet />
     </Container>
   );
