@@ -1,5 +1,7 @@
 # react-cookbook
 
+Up-to-date React recipes mostly from https://github.com/dogriffiths/ReactCookbook-source.
+
 ## Create a new app:
 
 ```bash
