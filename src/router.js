@@ -18,6 +18,7 @@ import { route as convertNetworkCallsToHooksRoute } from './views/convert-networ
 import { route as refreshAutomaticallyWithStateCountersRoute } from './views/refresh-automatically-with-state-counters/route';
 import { route as cancelNetworkRequestsWithAxiosTokensRoute } from './views/cancel-network-requests-with-axios-tokens/route';
 import { route as reduceNetworkLoadWithDebouncedRequestsRoute } from './views/reduce-network-load-with-debounced-requests/route';
+import { route as centralizedErrorHandlerRoute } from './views/centralized-error-handler/route';
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +40,8 @@ export const router = createBrowserRouter([
       convertNetworkCallsToHooksRoute,
       refreshAutomaticallyWithStateCountersRoute,
       cancelNetworkRequestsWithAxiosTokensRoute,
-      reduceNetworkLoadWithDebouncedRequestsRoute
+      reduceNetworkLoadWithDebouncedRequestsRoute,
+      centralizedErrorHandlerRoute
     ]
   }
 ]);
