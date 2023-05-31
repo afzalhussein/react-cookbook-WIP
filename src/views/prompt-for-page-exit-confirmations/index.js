@@ -3,7 +3,8 @@ import { RecipeContainer } from '../../components/recipe-container';
 export const PromptForPageExitConfirmation = () => {
   const dependencies = [
     { text: 'react-router-dom', link: 'https://reactrouter.com/en/main' },
-    { text: 'react-router-prompt', link: 'https://github.com/sshyam-gupta/react-router-prompt' }
+    { text: 'react-router-prompt', link: 'https://github.com/sshyam-gupta/react-router-prompt' },
+    { text: 'mui', link: 'https://mui.com/material-ui/' }
   ];
   const links = [{ text: 'Exit confirm page', link: 'exit-confirm-page' }];
   return (

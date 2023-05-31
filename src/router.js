@@ -19,6 +19,7 @@ import { route as refreshAutomaticallyWithStateCountersRoute } from './views/ref
 import { route as cancelNetworkRequestsWithAxiosTokensRoute } from './views/cancel-network-requests-with-axios-tokens/route';
 import { route as reduceNetworkLoadWithDebouncedRequestsRoute } from './views/reduce-network-load-with-debounced-requests/route';
 import { route as centralizedErrorHandlerRoute } from './views/centralized-error-handler/route';
+import { route as interactiveHelpGuideRoute } from './views/interactive-help-guide/route';
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +42,8 @@ export const router = createBrowserRouter([
       refreshAutomaticallyWithStateCountersRoute,
       cancelNetworkRequestsWithAxiosTokensRoute,
       reduceNetworkLoadWithDebouncedRequestsRoute,
-      centralizedErrorHandlerRoute
+      centralizedErrorHandlerRoute,
+      interactiveHelpGuideRoute
     ]
   }
 ]);

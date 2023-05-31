@@ -20,6 +20,7 @@ import { link as addKeyboardInteractionLink } from './views/add-keyboard-interac
 import { link as useMarkdownForRichContentLink } from './views/use-markdown-for-rich-content/route';
 import { link as animateWithCssClassesLink } from './views/animate-with-css-classes/route';
 import { link as centralizedErrorHandlerLink } from './views/centralized-error-handler/route';
+import { link as interactiveHelpGuideLink } from './views/interactive-help-guide/route';
 
 // Connecting to Services
 import { link as convertNetworkCallsToHooksLink } from './views/convert-network-calls-to-hooks/route';
@@ -56,7 +57,8 @@ export const Root = () => {
         addKeyboardInteractionLink,
         useMarkdownForRichContentLink,
         animateWithCssClassesLink,
-        centralizedErrorHandlerLink
+        centralizedErrorHandlerLink,
+        interactiveHelpGuideLink
       ]
     },
     {

@@ -1,18 +1,18 @@
 import { RecipeContainer } from '../../components/recipe-container';
 
-export const CentralizedErrorHandler = () => {
+export const InteractiveHelpGuide = () => {
   const dependencies = [
     {
       text: 'mui',
       link: 'https://mui.com/material-ui/'
     }
   ];
-  const links = [{ text: 'Clock in', link: 'clock-in' }];
+  const links = [{ text: 'App', link: 'app' }];
 
   return (
     <RecipeContainer
-      title="Build a centralized error handler"
-      description="catch any errors for which we have not previously planned"
+      title="Interactive help guide"
+      description="a series of pop-up notes that describe how to use the various features you can see on the page"
       dependencies={dependencies}
       links={links}
     />
