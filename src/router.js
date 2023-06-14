@@ -20,6 +20,7 @@ import { route as cancelNetworkRequestsWithAxiosTokensRoute } from './views/canc
 import { route as reduceNetworkLoadWithDebouncedRequestsRoute } from './views/reduce-network-load-with-debounced-requests/route';
 import { route as centralizedErrorHandlerRoute } from './views/centralized-error-handler/route';
 import { route as interactiveHelpGuideRoute } from './views/interactive-help-guide/route';
+import { route as manageServerStateWithReactQueryRoute } from './views/manage-server-state-with-react-query/route';
 
 export const router = createBrowserRouter([
   {
@@ -43,7 +44,8 @@ export const router = createBrowserRouter([
       cancelNetworkRequestsWithAxiosTokensRoute,
       reduceNetworkLoadWithDebouncedRequestsRoute,
       centralizedErrorHandlerRoute,
-      interactiveHelpGuideRoute
+      interactiveHelpGuideRoute,
+      manageServerStateWithReactQueryRoute
     ]
   }
 ]);

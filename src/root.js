@@ -27,6 +27,7 @@ import { link as convertNetworkCallsToHooksLink } from './views/convert-network-
 import { link as refreshAutomaticallyWithStateCountersLink } from './views/refresh-automatically-with-state-counters/route';
 import { link as cancelNetworkRequestsWithAxiosTokensLink } from './views/cancel-network-requests-with-axios-tokens/route';
 import { link as reduceNetworkLoadWithDebouncedRequestsLink } from './views/reduce-network-load-with-debounced-requests/route';
+import { link as manageServerStateWithReactQueryLink } from './views/manage-server-state-with-react-query/route';
 
 function a11yProps(index) {
   return {
@@ -67,7 +68,8 @@ export const Root = () => {
         convertNetworkCallsToHooksLink,
         refreshAutomaticallyWithStateCountersLink,
         cancelNetworkRequestsWithAxiosTokensLink,
-        reduceNetworkLoadWithDebouncedRequestsLink
+        reduceNetworkLoadWithDebouncedRequestsLink,
+        manageServerStateWithReactQueryLink
       ]
     }
   ];
